@@ -1,5 +1,11 @@
 <?php
 
+/*define response for route not exist*/
+App::missing(function($exception)  //ir a missing.blade.php
+{
+    return Response::view('missing', array(), 404);
+});
+/*define response for route not exist*/
 
 /*Controls of auth*/
 Route::get('login', 'AuthController@showLogin');
