@@ -158,13 +158,6 @@
         </div>
 
         <div id="asignTask" class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 ocultar" style="display:none" >
-          <div class="col-md-4 col-md-offset-4">Asignar Tarea
-          </div>
-        </div>
-
-        <!--Esta es otra sección, otra vista, sacada de: https://github.com/ProjectsLaravel/sistemasGestion/blob/master/app/views/auth/dash.blade.php-->
-        <section id="asignarTarea" class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 ocultar spin" style="display:none" >
-          
           <div class="container top">
             <div class="row">
                 <div class="row">
@@ -192,7 +185,7 @@
                           {{ Form::text('folio','', ['id' => 'folio', 'class' => 'form-control', 'placeholder' => 'Folio', 'autofocus' => '']) }}
                           </br>
                           {{ Form::label('Oficio Referencia', 'Oficio Referencia')}}
-                          {{ Form::text('oficio_referencia','', ['id' => 'oficio_referencia', 'class' => 'form-control', 'placeholder' => 'Oficio Referencia', 'autofocus' => '']) }}
+                          {{ Form::text('oficioReferencia','', ['id' => 'oficio_referencia', 'class' => 'form-control', 'placeholder' => 'Oficio Referencia', 'autofocus' => '']) }}
                           </br>
                           {{ Form::label('Descripcion', 'Descripcion')}}
                           {{ Form::text('descripcion', '', ['id' => 'descripcion', 'class' => 'form-control', 'placeholder' => 'Asunto', 'autofocus' => '']) }}
@@ -206,12 +199,16 @@
                   </div>
                 </div>
             </div>
+        </div>
+
+        <!--Esta es otra sección, otra vista, sacada de: https://github.com/ProjectsLaravel/sistemasGestion/blob/master/app/views/auth/dash.blade.php-->
+        <section id="asignarTarea" class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 ocultar spin" style="display:none" >
+          
+          
           </div>
        
         </section>
-
       </div>
-
       </div>
     </div>
 
