@@ -24,7 +24,7 @@ Route::post('password/reset/{token}', ['as' => 'resetPass', 'uses' => 'UserContr
 
 //Route::post('uploadImage', ['as' => 'uploadImage', 'uses' => 'UserController@uploadImage' ] );
 
-/*private routes only for users auth(logeados)*/
+/*private routes only for users auth(logeados)  ---> Para usuarios ya logeados*/
 Route::group(['before' => 'auth'], function()
 {
 	//Route::get('/', 'HomeController@showWelcome');
@@ -34,6 +34,8 @@ Route::group(['before' => 'auth'], function()
 	Route::post('updateUser', ['as' => 'updateUser', 'uses' => 'UserController@updateUser' ] );
 
 	Route::post('uploadImage', ['as' => 'uploadImage', 'uses' => 'UserController@uploadImage' ] );
+
+	Route::post('asignTask', ['as' => 'asignTask', 'uses' => '' ] );
 
 	//Route::post('uploadImage', 'UserController@uploadImage');
 });

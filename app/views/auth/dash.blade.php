@@ -66,7 +66,7 @@
             <li id="liSocial" class="lis" onclick="addClassActive('liSocial');showView('social','ocultar')"><a href="#">Social Networking</a></li>
             <li id="liFavor" class="lis" onclick="addClassActive('liFavor');showView('favor','ocultar')"><a href="#">favorites</a></li>
             <li id="liRecom" class="lis" onclick="addClassActive('liRecom');showView('recom','ocultar')"><a href="#">Recommended</a></li>
-            <li id="liAsignTask" class="lis" onclick="addClassActive('liAsignTask');showView('asignTask','ocultar')"><a href="#">Recommended</a></li>
+            <li id="liAsignTask" class="lis" onclick="addClassActive('liAsignTask');showView('asignTask','ocultar')"><a href="#">Asign Task</a></li>
           </ul>
 
         </div>
@@ -158,7 +158,7 @@
         </div>
 
         <div id="asignTask" class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 ocultar" style="display:none" >
-          <div class="col-md-4 col-md-offset-4">Recommended
+          <div class="col-md-4 col-md-offset-4">Asignar Tarea
           </div>
         </div>
 
@@ -184,7 +184,7 @@
                           </div>
                         @endif
                         
-                        {{ Form::open(['route' => 'asignarTarea', 'method' => 'POST', 'role' => 'form','files' => true]) }}
+                        {{ Form::open(['route' => 'asignTask', 'method' => 'POST', 'role' => 'form','files' => true]) }}
                           {{ Form::hidden('admin_id', Auth::user()->id ) }}
                           {{ Form::hidden('estatus', 'enproceso' ) }}
                           </br>
@@ -198,10 +198,10 @@
                           {{ Form::text('asunto', '', ['id' => 'asunto', 'class' => 'form-control', 'placeholder' => 'Asunto', 'autofocus' => '']) }}
                           </br>
                           {{ Form::label('Fecha de Recepción', 'Fecha Recepción')}}
-                          {{ Form::custom('datepicker', 'date', 'fecha_recepcion') }}
+                          
                           {{ Form::label('Fecha de respuesta', 'Fecha Respuesta')}}
                           <!-- class , type, name -->
-                          {{ Form::custom('datepicker', 'date', 'fecha_respuesta') }}
+                          
                           </br>
                           {{ Form::label('Area Generadora', 'Area Generadora')}}
                           {{ Form::text('area_generadora','', ['id' => 'area_generadora', 'class' => 'form-control', 'placeholder' => 'Area Generadora', 'autofocus' => '']) }}
